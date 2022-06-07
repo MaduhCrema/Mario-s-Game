@@ -1,0 +1,80 @@
+*{
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+}
+.board{
+    position: relative;
+    margin: 0 auto;
+    border-bottom: 10px solid limegreen;
+    width: 100%;
+    height: 753px;
+    overflow: hidden;
+    background-color: rgba(66, 110, 163, 0.363);
+}
+
+.pipe{    
+    width: 80px;
+    bottom:  0;
+    position: absolute;
+    animation: pipeAnimation 1.8s infinite linear;
+}
+
+.mario{
+    width: 150px;
+    bottom: 0px;    
+    position: absolute;
+}
+
+.clounds{
+    width: 40%;
+    position: absolute;
+    margin-top: 50px;
+    animation: cloundsAnimation 20s infinite linear;
+}
+
+.jump{
+    animation: jumpMario 500ms ease-in-out;
+}
+
+@keyframes pipeAnimation {
+    from{
+        right:-60px;
+    }
+
+    to{
+        right:100%;
+    }
+}
+
+@keyframes cloundsAnimation {
+    from{
+        right:-50%;
+    }
+
+    to{
+        right:100%;
+    }
+}
+
+@keyframes jumpMario {
+    0% {
+        bottom: 0px;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
